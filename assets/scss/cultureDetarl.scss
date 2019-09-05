@@ -1,0 +1,141 @@
+#center{
+  background: #F8F8F8;
+  overflow: hidden;
+}
+.top-wrap{
+  width: 100%;
+  background: #4B505A;
+  height: 300px;
+}
+.top{
+  // width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url(https://image.songshupinpin.com/goods_1546504399402.png);
+  background-size: 1440px 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  p:first-of-type{
+    height:50px;
+    font-size:40px;
+    font-weight:600;
+    color:rgba(255,255,255,1);
+    line-height:50px;
+    margin: 82px 0 18px;
+    text-align: center;
+  }
+  p:last-of-type{
+    height:24px;
+    font-size:18px;
+    font-weight:300;
+    color:rgba(255,255,255,1);
+    line-height:24px;
+    text-align: center;
+  }
+}
+.middle{
+  min-height: 518px;
+  width: 1080px;
+  margin: -60px auto 50px;
+  background: #ffffff;
+  box-shadow:0px 2px 12px 0px rgba(0,0,0,0.05);
+  .navs{
+    height: 60px;
+    background: #F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // box-shadow:0px 2px 12px 0px rgba(0,0,0,0.05);
+    border-radius:5px 5px 0px 0px;
+    overflow: hidden;
+    a{
+      display: block;
+      width: 220px;
+      color:#888888;
+      line-height: 60px;
+      cursor: pointer;
+      &:last-of-type span{
+        border: none;
+      }
+      span{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size:15px;
+        font-weight:400;
+        line-height:14px;
+        border-right: 1px solid #d8d8d8;
+      }
+    }
+    .active{
+      color: #E9463F;
+    }
+  }
+
+  main{
+    padding: 50px 154px;
+    .con{
+      display: none;
+    }
+    
+  }
+}
+article{
+      .title{
+        text-align: center;
+        font-size:24px;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        line-height:35px;
+        margin-bottom: 10px;
+        padding: 0 90px;
+      }
+      .date{
+        text-align: center;
+        font-size:12px;
+        font-weight:400;
+        color:rgba(136,136,136,1);
+        line-height:28px;
+        margin-bottom: 50px;
+      }
+      section{
+        font-size:15px;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        line-height:28px;
+        .banner{
+          text-align: center;
+          margin: 50px 0;
+          img{
+            width: 515px;
+            // height: 355px;
+          }
+          .img{
+            width: 600px;
+          }
+        }
+        .banner-photo{
+          text-align: center;
+          margin: 50px 0;
+          img{
+            height: 500px;
+          }
+        }
+        p{
+          margin-bottom: 30px;
+        }
+        .source{
+          text-align: right;
+        }
+        .bold{
+          font-weight: bold;
+          font-size:16px;
+        }
+        .font-for-img{
+          text-align: center;
+          color: #999999;
+          margin-top: -30px;
+        }
+      }
+    }

@@ -1,0 +1,100 @@
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft Yahei','PingFang SC','Source Han Sans CN';
+    box-sizing: border-box;
+}
+div::-moz-selection, dl::-moz-selection, dt::-moz-selection, dd::-moz-selection, ul::-moz-selection, ol::-moz-selection, li::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, pre::-moz-selection, code::-moz-selection, form::-moz-selection, fieldset::-moz-selection, legend::-moz-selection, input::-moz-selection, button::-moz-selection, textarea::-moz-selection, p::-moz-selection, blockquote::-moz-selection, th::-moz-selection, td::-moz-selection {
+    background:rgba(233,70,63,.25); color:#000;
+}
+div::selection, dl::selection, dt::selection, dd::selection, ul::selection, ol::selection, li::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, pre::selection, code::selection, form::selection, fieldset::selection, legend::selection, input::selection, button::selection, textarea::selection, p::selection, blockquote::selection, th::selection, td::selection {
+    background:rgba(233,70,63,.25); color:#000;
+}
+html::-webkit-selection,div::-webkit-selection, dl::-webkit-selection, dt::-webkit-selection, dd::-webkit-selection, ul::-webkit-selection, ol::-webkit-selection, li::-webkit-selection, h1::-webkit-selection, h2::-webkit-selection, h3::-webkit-selection, h4::-webkit-selection, h5::-webkit-selection, h6::-webkit-selection, pre::-webkit-selection, code::-webkit-selection, form::-webkit-selection, fieldset::-webkit-selection, legend::-webkit-selection, input::-webkit-selection, button::-webkit-selection, textarea::-webkit-selection, p::-webkit-selection, blockquote::-webkit-selection, th::-webkit-selection, td::-webkit-selection{
+    background:rgba(233,70,63,.25); color:#000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+a {
+    color: #555;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+::selection { background-color: #272E3A; color:#fff; text-shadow: none; }
+img {
+    border: none;
+    vertical-align: middle;
+}
+ul, ol, dl, dt, dd, li { list-style: none; }
+
+table {
+    border-collapse: collapse;
+}
+// 文本溢出省略号显示 (默认1行)
+@mixin ellipsis($line: 1){
+    @if $line == 1 {
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    @else {
+      display: -webkit-box !important;
+      -ms-text-overflow: ellipsis;
+      text-overflow:ellipsis;
+      overflow: hidden;
+      // word-break: break-all; // 断词
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: $line;
+    }
+}
+//水平垂直居中
+@mixin flexCenVer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//多行水平垂直居中
+@mixin flexCenVerLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+//水平两端对齐，垂直居中
+@mixin flexBothEndsVer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+/*公共类*/
+.fl {float: left}
+.fr { float: right}
+.al {text-align: left}
+.ac {text-align: center}
+.ar {text-align: right}
+.hide {display: none}
+.hide { display: none; }
+.show { display: block; }
+#content{
+    margin: 0 auto;
+    padding-top: 1.2rem;
+}
+// 公共变量
+$colorMain: #E9463F;
+
+@function px2rem( $px ){
+	@return $px/50 + rem;
+}
